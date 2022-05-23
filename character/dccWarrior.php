@@ -666,7 +666,7 @@
 
         <span id="armourACBonus">
             <?php
-                echo $totalAcDefense;
+                echo '+' . $totalAcDefense;
             ?>
         </span>
 

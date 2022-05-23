@@ -142,15 +142,15 @@ body{
 
 #weaponsList{
     position:absolute;
-    top: 1010px;
-    left: 46px;
+    top: 1015px;
+    left: 40px;
 	font-size: 0.65em;
 }
 
 #weaponsList2{
     position:absolute;
-    top: 1010px;
-    left: 285px;
+    top: 1015px;
+    left: 290px;
 	font-size: 0.65em;
 }
 
@@ -218,8 +218,10 @@ body{
 #luckyWeapon{
     position:absolute;
     top: 660px;
-    left: 390px;
+    left: 405px;
     font-size: 0.8em;
+    font-size: 0.8em;
+    width: 240px;
 }
 
 
@@ -344,17 +346,17 @@ body{
 
 #speed{
     position:absolute;
-    top: 435px;
-    left: 845px;
-	font-size: 1.4em;
+    top: 420px;
+    left: 790px;
+	font-size: 1.6em;
 }
 
 
 #xpNextLevel{
     position:absolute;
-    top: 595px;
-    left: 830px;
-	font-size: 0.8em;
+    top: 580px;
+    left: 790px;
+	font-size: 0.9em;
 }
 
 
@@ -412,31 +414,29 @@ body{
 
 #reflex{
     position:absolute;
-    top: 330px;
-    left: 750px;
+    top: 350px;
+    left: 720px;
 	font-size: 1.6em;
 }
 
 #fort{
     position:absolute;
-    top: 330px;
-    left: 840px;
+    top: 308px;
+    left: 785px;
 	font-size: 1.6em;
-    color: white;
 }
 
 #will{
     position:absolute;
-    top: 430px;
-    left: 750px;
+    top: 350px;
+    left: 865px;
 	font-size: 1.6em;
-    color: white;
 }
 
 #criticalDieTable{
     position:absolute;
     top: 227px;
-    left: 255px;
+    left: 270px;
     font-size: 0.85em;
 }
 
@@ -451,21 +451,21 @@ body{
 #initiative{
     position:absolute;
     top: 227px;
-    left: 380px;
+    left: 385px;
     font-size: 0.9em;
 }
 
 #threatRange{
     position:absolute;
     top: 227px;
-    left: 580px;
+    left: 550px;
     font-size: 0.9em;
 }
 
 #attackBonus{
     position:absolute;
     top: 227px;
-    left: 440px;
+    left: 450px;
     font-size: 0.9em;
 }
 
@@ -487,8 +487,8 @@ body{
 
 #languages{
     position:absolute;
-    top: 730px;
-    left:  390px;
+    top: 740px;
+    left:  405px;
     font-size: 0.8em;
     width: 240px;
 }
