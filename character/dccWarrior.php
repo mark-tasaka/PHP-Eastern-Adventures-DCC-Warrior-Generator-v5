@@ -39,6 +39,12 @@
     include 'php/gender.php';
     include 'php/languages.php';
     
+    
+            
+        if(isset($_POST["theGender"]))
+        {
+            $gender = $_POST["theGender"];
+        }
 
         if(isset($_POST["theCharacterName"]))
         {
@@ -54,59 +60,20 @@
             $givenName = '24';
             $surname = '19';
             
+            $genderName = getGenderName($gender);
+            $genderNameIdentifier = genderNameGeneration ($gender);
+
+            $fullName = getName($givenName, $surname, $genderNameIdentifier);
+            
+        }
+        else
+        {
+            $givenName = '';
+            $surname = '';
+            $genderName = getGenderName($gender);
+            $fullName = '';
         } 
 
-        /*
-        if(isset($_POST["theGivenName"]))
-        {
-            $givenName = $_POST["theGivenName"];
-
-        }
-
-        if($givenName == '100')
-        {
-            $givenName = rand(0, 49);
-        }
-        else
-        {
-            $givenName = $givenName;
-        }
-        
-
-
-        if(isset($_POST["theSurname"]))
-        {
-            $surname = $_POST["theSurname"];
-
-        }
-
-        if($surname == '100')
-        {
-            $surname = rand(0, 37);
-        }
-        else
-        {
-            $surname = $surname;
-        }
-
-
-
-        if(isset($_POST['theCheckBoxCustomName']) && $_POST['theCheckBoxCustomName'] == 1) 
-        {
-            $givenName = 200;
-            $surname = 200;
-            
-        } */
-        
-        if(isset($_POST["theGender"]))
-        {
-            $gender = $_POST["theGender"];
-        }
-
-        $genderName = getGenderName($gender);
-        $genderNameIdentifier = genderNameGeneration ($gender);
-
-        $fullName = getName($givenName, $surname, $genderNameIdentifier);
 
         
         if(isset($_POST["thePlayerName"]))
@@ -173,7 +140,6 @@
         $luckMod = getAbilityModifier($luck);
 
 
-        $nameGenMessage = getNameDescript($givenName, $surname);
         $generationMessage = generationMesssage ($abilityScoreGen);
     
     
@@ -189,25 +155,8 @@
         $armourSpeedPen = getArmour($armour)[3];
         $armourFumbleDie = getArmour($armour)[4];
 
-        if(isset($_POST['theCheckBoxShield']) && $_POST['theCheckBoxShield'] == 1) 
-        {
-            $shieldName = getArmour(10)[0];
-            $shieldACBonus = getArmour(10)[1];
-            $shieldCheckPen = getArmour(10)[2];
-            $shieldSpeedPen = getArmour(10)[3];
-            $shieldFumbleDie = getArmour(10)[4];
-        }
-        else
-        {
-            $shieldName = getArmour(11)[0];
-            $shieldACBonus = getArmour(11)[1];
-            $shieldCheckPen = getArmour(11)[2];
-            $shieldSpeedPen = getArmour(11)[3];
-            $shieldFumbleDie = getArmour(11)[4];
-        } 
-
-       $totalAcDefense = $armourACBonus + $shieldACBonus;
-       $totalAcCheckPen = $armourCheckPen + $shieldCheckPen;
+       $totalAcDefense = $armourACBonus;
+       $totalAcCheckPen = $armourCheckPen;
        $speedPenality = $armourSpeedPen;
 
        $speed = 30 - $armourSpeedPen;
@@ -649,18 +598,7 @@
               
        <span id="armourName">
            <?php
-           if($armourName == "")
-           {
-               echo $shieldName;
-           }
-           else if($shieldName == "")
-           {
                 echo $armourName;
-           }
-           else
-           {
-            echo $armourName . " & " . $shieldName;
-           }
            ?>
         </span>
 
@@ -692,14 +630,7 @@
 
         <span id="fumbleDie">
             <?php
-            if($armourName == "")
-            {
-                echo $shieldFumbleDie;
-            }
-            else
-            {
                 echo $armourFumbleDie;
-            }
             ?>
         </span>
 
@@ -833,7 +764,7 @@
 
        <span id="abilityScoreGeneration">
             <?php
-           echo $nameGenMessage . '<br/>' . $generationMessage;
+           echo $generationMessage;
            ?>
        </span>
 
