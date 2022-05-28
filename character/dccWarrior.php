@@ -76,13 +76,6 @@
 
 
         
-        if(isset($_POST["thePlayerName"]))
-        {
-            $playerName = $_POST["thePlayerName"];
-    
-        }
-        
-        
 
 
         if(isset($_POST["theAlignment"]))
@@ -95,6 +88,25 @@
             $level = $_POST["theLevel"];
         
         } 
+
+        
+        
+        if(isset($_POST["thePlayerName"]))
+        {
+            $playerName = $_POST["thePlayerName"];
+    
+        }
+
+        if(isset($_POST['theEasternTitle']) && $_POST['theEasternTitle'] == 1) 
+        {
+            $title = titleEastern($level, $gender);
+        }
+        else
+        {
+            $title = title($level, $alignment);
+        } 
+
+        
 
         
         $xpNextLevel = getXPNextLevel ($level);
@@ -195,8 +207,6 @@
 
        $speed = getSpeed($luckMod, $luckySign[0]);
        $speed -= $speedPenality;
-
-       $title = title($level, $alignment);
 
        $initiative = getInit($agilityMod, $luckMod, $luckySign[0]);
        $initiative += $level; 

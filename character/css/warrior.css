@@ -95,7 +95,7 @@ body{
 #armourName{
     position:absolute;
     top: 920px;
-    left: 55px;
+    left: 40px;
     font-size: 0.8em;
     width: 200px;
 }
@@ -196,7 +196,7 @@ body{
 
 #wealth{
     position:absolute;
-    top: 827px;
+    top: 855px;
     left: 680px;
     font-size: 0.6em;
     width: 230px;

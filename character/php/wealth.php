@@ -1,95 +1,93 @@
 <?php
 
+
 function getWealth($input)
 {
     $wealth = '';
-    $copper = 0;
-    $silver = 0;
-    $gold = 0;
-    $electrum = 0;
-    $platnum = 0;
+    $mon = 0;
+    $shu = 0;
+    $ryu = 0;
 
-    
+
     if($input == 2)
     {
-        for($k = 0; $k < 3; ++$k)
+        for($k = 0; $k < 6; ++$k)
         {
-            $copperCoin = rand(1, 12);
-            $copper += $copperCoin;
+            $monCoin = rand(1, 20);
+            $mon += $monCoin;
         }
         
         for($i = 0; $i < 3; ++$i)
         {
-            $silverCoin = rand(1, 12);
-            $silver += $silverCoin;
+            $shuCoin = rand(1, 12);
+            $shu += $shuCoin;
         }
         
         for($m = 0; $m < 3; ++$m)
         {
-            $goldCoin = rand(1, 12);
-            $gold += $goldCoin;
+            $ryuCoin = rand(1, 6);
+            $ryu += $ryuCoin;
         }
 
-        $wealth = $gold . ' gold, ' . $silver . ' silver & ' . $copper  . ' copper pieces';
+        $wealth = $ryu . ' ryu, ' . $shu . ' shu & ' . $mon  . ' mon';
     }
-    
+
     if($input == 3)
     {
-        for($i = 0; $i < 6; ++$i)
+        for($k = 0; $k < 3; ++$k)
         {
-            $silverCoin = rand(1, 12);
-            $silver += $silverCoin;
+            $monCoin = rand(1, 12);
+            $mon += $monCoin;
         }
         
-        for($m = 0; $m < 6; ++$m)
+        for($i = 0; $i < 3; ++$i)
         {
-            $goldCoin = rand(1, 12);
-            $gold += $goldCoin;
+            $shuCoin = rand(1, 12);
+            $shu += $shuCoin;
+        }
+        
+        for($m = 0; $m < 3; ++$m)
+        {
+            $ryuCoin = rand(1, 12);
+            $ryu += $ryuCoin;
         }
 
-        $wealth = $gold . ' gold & ' . $silver . ' silver pieces';
+        $wealth = $ryu . ' ryu, ' . $shu . ' shu & ' . $mon  . ' mon';
     }
     
     if($input == 4)
     {
-        for($i = 0; $i < 8; ++$i)
+        for($i = 0; $i < 6; ++$i)
         {
-            $goldCoin = rand(1, 12);
-            $gold += $goldCoin;
+            $shuCoin = rand(1, 12);
+            $shu += $shuCoin;
         }
         
-        for($m = 0; $m < 3; ++$m)
+        for($m = 0; $m < 6; ++$m)
         {
-            $electrumCoin = rand(1, 6);
-            $electrum += $electrumCoin;
+            $ryuCoin = rand(1, 12);
+            $ryu += $ryuCoin;
         }
 
-        $wealth = $electrum . ' electrum & ' . $gold . ' gold pieces';
+        $wealth = $ryu . ' ryu & ' . $shu . ' shu';
     }
     
     if($input == 5)
     {
         for($i = 0; $i < 6; ++$i)
         {
-            $goldCoin = rand(1, 12);
-            $gold += $goldCoin;
+            $shuCoin = rand(1, 12);
+            $shu += $shuCoin;
         }
         
-        for($m = 0; $m < 3; ++$m)
+        for($m = 0; $m < 12; ++$m)
         {
-            $electrumCoin = rand(1, 10);
-            $electrum += $electrumCoin;
-        }
-        
-        for($m = 0; $m < 2; ++$m)
-        {
-            $platnumCoin = rand(1, 6);
-            $platnum += $platnumCoin;
+            $ryuCoin = rand(1, 12);
+            $ryu += $ryuCoin;
         }
 
-        $wealth = $platnum . ' platnum, ' . $electrum . ' electrum & ' . $gold . ' gold pieces';
+        $wealth = $ryu . ' ryu & ' . $shu . ' shu';
     }
-
     return $wealth;
 
 }

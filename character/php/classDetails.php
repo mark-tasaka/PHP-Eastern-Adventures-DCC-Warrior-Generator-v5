@@ -357,4 +357,42 @@ return $title;
 
 }
 
+function titleEastern($level, $gender)
+{
+    $title = "";
+
+    if($level == 1)
+    {
+        $title = "Student";
+    }
+    else if($level == 2)
+    {
+        $title = "Disciple";
+    }
+    else if($level == 3)
+    {
+        if($gender == "0")
+        {
+            $title = "Swordsman";
+        }
+        else if($gender == "1")
+        {
+            $title = "Swordswoman";
+        }
+        else{
+            $title = "Swordsperson";
+        }
+    }
+    else if($level == 4)
+    {
+        $title = "Sword Master";
+    }
+    else
+    {
+        $title = "Sword Saint";
+    }
+
+    return $title;
+
+}
 ?>
