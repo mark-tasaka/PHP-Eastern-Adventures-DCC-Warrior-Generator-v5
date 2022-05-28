@@ -3,6 +3,11 @@ The Eastern Adventures Redux Warrior Character Generator is the fifth iteration 
 
 
 
+Update 1.04: 2022-05-27
+
+Updates to dccWarrior, warrior.css, wealth.php, classDetails.php.  As well, a new character sheet has been added (warrior.png).
+
+
 Update 1.03: 2022-05-26
 
 Updates to dccWarrior, warrior.css, armour.php, and weapons.php.
