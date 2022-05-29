@@ -4,89 +4,81 @@
 
 function getOccupation()
 {
-	        
-		$a31 = array("Alchemist", "Human", "Staff", "1d4", "Oil, 1 flask");
-		$a32 = array("Animal Trainer", "Human", "Club", "1d4", "Pony");
-		$a33 = array("Armourer", "Human", "Hammer (as Club)", "1d4", "Iron Helmet");
-		$a34 = array("Astrologer", "Human", "Dagger", "1d4", "Spyglass");
-		$a35 = array("Barber", "Human", "Razor (as Dagger)", "1d4", "Scissors (as Dagger)");
-		$a36 = array("Beadle", "Human", "Staff", "1d4", "Holy Symbol");
-		$a37 = array("Beekeeper", "Human", "Hammer (as club)", "1d4", "Jar of Honey");
-		$a38 = array("Blacksmith", "Human", "Hammer (as Club)", "1d4", "Steel Tongs");
-		$a39 = array("Butcher", "Human", "Cleaver (as axe)", "1d6", "Side of Beef");
-		$a40 = array("Caravan Guard", "Human", "Short Sword", "1d6", "Linen, 1 Yard");
-		// Humans 41 - 47 Cheesemaker to Ditchdigger
-		$a41 = array("Cheesemaker", "Human", "Cudgel (as Staff)", "1d4", "Stinky Cheese");
-		$a42 = array("Cobbler", "Human", "Awl (as Dagger)", "1d4", "Shoehorn");
-		$a43 = array("Confidence Artist", "Human", "Dagger", "1d4", "Quality Cloak");
-		$a44 = array("Cooper", "Human", "Crowbar (as Club)", "1d4", "Barrel");
-		$a45 = array("Costermonger", "Human", "Knife (as Dagger)", "1d4", "Fruit");
-		$a46 = array("Cutpurse", "Human", "Dagger", "1d4", "Small Chest");
-		$a47 = array("Ditchdigger", "Human", "Shovel (as Staff)", "1d4", "Fine Dirt, 1 lbs.");
-		//Humans 48 - 56 Farmer Potato to Onion
-		$a48 = array("Farmer Potato", "Human", "Pitchfork (as Spear)", "1d8", "Livestock");
-		$a49 = array("Farmer Wheat", "Human", "Pitchfork (as Spear)", "1d8", "Livestock");
-		$a50 = array("Farmer Turnip", "Human", "Pitchfork (as Spear)", "1d8", "Livestock");
-		$a51 = array("Farmer Corn", "Human", "Pitchfork (as Spear)", "1d8", "Livestock");
-		$a52 = array("Farmer Rice", "Human", "Pitchfork (as Spear)", "1d8", "Livestock");
-		$a53 = array("Farmer Parsnip", "Human", "Pitchfork (as Spear)", "1d8", "Livestock");
-		$a54 = array("Farmer Radish", "Human", "Pitchfork (as Spear)", "1d8", "Livestock");
-		$a55 = array("Farmer Rutabaga", "Human", "Pitchfork (as Spear)", "1d8", "Livestock");
-		$a56 = array("Farmer Turnip", "Human", "Pitchfork (as Spear)", "1d8", "Livestock");
-		// Humans 57 - 70: Fortune Teller to Jester
-		// 66 - Herder
-		$a57 = array("Fortune Teller", "Human", "Dagger", "1d4", "Tarot Deck");
-		$a58 = array("Gambler", "Human", "Club", "1d4", "Dice");
-		$a59 = array("Gong Farmer", "Human", "Trowel (as Dagger)", "1d4", "Sack of Night Soil");
-		$a60 = array("Ditcher", "Human", "Shovel (as Staff)", "1d4", "Trowel (as Dagger)");
-		$a61 = array("Grave Digger", "Human", "Shovel (as Staff)", "1d4", "Trowel (as Dagger)");
-		$a62 = array("Guild Beggar", "Human", "Sling", "1d4", "Crutches");
-		$a63 = array("Beggar", "Human", "Sling", "1d4", "Crutches");
-		$a64 = array("Healer", "Human", "Club", "1d4", "Holy Water, 1 Vial");
-		$a65 = array("Herbalist", "Human", "Sling", "1d4", "Herbs, 1 lbs.");
-		$a66 = array("Herder", "Human", "Staff", "1d4", "Herding Dog");
-		$a67 = array("Hunter", "Human", "Short Bow", "1d6", "Deer Pelt");
-		$a68 = array("Huntsman", "Human", "Short Bow", "1d6", "Deer Pelt");
-		$a69 = array("Indentured Servant", "Human", "Staff", "1d4", "Locket");
-		$a70 = array("Jester", "Human", "Dart", "1d4", "Silk Cloths");
-		// Humans 71 - 80: Jeweler to Rope Maker
-		$a71 = array("Jeweler", "Human", "Dagger", "1d4", "Gem worth 20 gp");
-		$a72 = array("Locksmith", "Human", "Dagger", "1d4", "Fine Tools");
-		$a73 = array("Mendicant", "Human", "Club", "1d4", "Cheese Dip");
-		$a74 = array("Locksmith", "Human", "Dagger", "1d4", "Fine Tools");
-		$a75 = array("Merchant", "Human", "Dagger", "1d4", "");
-		$a76 = array("Miller/Baker", "Human", "Club", "1d4", "Flour, 1 lbs.");
-		$a77 = array("Minstrel", "Human", "Dagger", "1d4", "Ukulele");
-		$a78 = array("Noble", "Human", "Longsword", "1d8", "Gold Ring worth 10 gp");
-		$a79 = array("Orphan", "Human", "Club", "1d4", "Rag Doll");
-		$a80 = array("Ostler", "Human", "Staff", "1d4", "Bridle");
-		$a81 = array("Rope Maker", "Human", "Knife (as Dagger)", "1d4", "Rope, 100'");
-		// 81 - 90: Scribe to Urchin
-		$a82 = array("Scribe", "Human", "Dart", "1d4", "Parchment, 10 sheets");
-		$a83 = array("Shaman", "Human", "Mace", "1d6", "Herbs, 1 lbs.");
-		$a84 = array("Slave", "Human", "Club", "1d4", "Strange-looking Rock");
-		$a85 = array("Smuggler", "Human", "Sling", "1d4", "Waterproof Sack");
-		$a86 = array("Squire", "Human", "Longsword", "1d8", "Steel Helmet");
-		$a87 = array("Herald", "Human", "Longsword", "1d8", "Steel Helmet");
-		$a88 = array("Tax Collector", "Human", "Longsword", "1d8", "");
-		$a89 = array("Trapper", "Human", "Sling", "1d4", "Badger Pelt");
-		$a90 = array("Molecatcher", "Human", "Sling", "1d4", "Mole Pelt");
-		$a91 = array("Urchin", "Human", "Stick (as Club)", "1d4", "Begging Bowl");
-		//92 - 96: Wainwright to Wood Seller
-		// Humans 92 -  Wainwright
-		$a92 = array("Wainwright", "Human", "Club", "1d4", "Push Cart");
-		$a93 = array("Weaver", "Human", "Dagger", "1d4", "Fine Suit of Clothes");
-		$a94 = array("Wizard's Apprentice", "Human", "Dagger", "1d4", "Black Grimoire");
-		$a95 = array("Woodcutter", "Human", "Hand Axe", "1d6", "Bundle of Wood");
-		$a96 = array("Woodmonger", "Human", "Hand Axe", "1d6", "Bundle of Wood");
-		$a97 = array("Wood Seller", "Human", "Hand Axe", "1d6", "Bundle of Wood");
-		// Humans 97 - 99: Mercenary to 
-		$a98 = array("Mercenary", "Human", "Longsword", "1d8", "");
-		$a99 = array("Outlaw", "Human", "Short Sword", "1d6", "");
-		$a100 = array("Soldier", "Human", "Spear", "1d8", "");
-	
+	$a30 = array("Ama (deep-sea pearl diver)", "Human", "Knife (as dagger)", "1d4", "Pearl");
+	$a31 = array("Arborist", "Human", "Hand-axe", "1d6", "Pouch filled with seeds");
+	$a32 = array("Armourer", "Human", "Hammer (as club)", "1d4", "Okashi gusoku [armour]");
+	$a33 = array("Aspiring sushi chef", "Human", "Knife (as dagger)", "1d4", "3 lbs of raw fish");
+	$a34 = array("Bandit", "Human", "Spear", "1d8", "Karuta tatami [armour]");
+	$a35 = array("Boat builder", "Human", "Hammer (as club)", "1d4", "2 dozen iron nails");
+	$a36 = array("Bonsai artist", "Human", "Clippers (as dagger)", "1d4", "Bonsai tree");
+	$a37 = array("Calligrapher", "Human", "Short-sword", "1d6", "Calligraphy brush and fine ink");
+	$a38 = array("Carpenter", "Human", "Hammer (as club)", "1d4", "Hemp rope, 50’ ");
+	$a39 = array("Chopstick maker", "Human", "Chisel (as dagger)", "1d4", "Dozen pairs of chopsticks");
 
-        $array1 = array($a31, $a32, $a33, $a34, $a35, $a36, $a37, $a38, $a39, $a40, $a41, $a42, $a43, $a44, $a45, $a46, $a47, $a48, $a49, $a50, $a51, $a52, $a53, $a54, $a55, $a56, $a57, $a58, $a59, $a60, $a61, $a62, $a63, $a64, $a65, $a66, $a67, $a68, $a69, $a70, $a71, $a72, $a73, $a74, $a75, $a76, $a77, $a78, $a79, $a80, $a81, $a82, $a83, $a84, $a85, $a86, $a87, $a88, $a89, $a90, $a91, $a92, $a93, $a94, $a95, $a96, $a97, $a98, $a99, $a100);
+	$a40 = array("Coal miner", "Human", "Pick (as battle axe)", "1d10", "Bag filled with coal");
+	$a41 = array("Firewood collector", "Human", "Hand-axe", "1d6", "Bundle of firewood");
+	$a42 = array("Fish merchant", "Human", "Knife (as dagger)", "1d4", "10 lbs of fish");
+	$a43 = array("Fisherman", "Human", "Knife (as dagger)", "1d4", "Fishing net, 10’x10'");
+	$a44 = array("Fishing net mender", "Human", "Knife (as dagger)", "1d4", "3’ x 3’ net");
+	$a45 = array("Fletcher", "Human", "Longbow", "1d6", "Quiver with 20 arrows");
+	$a46 = array("Folklorist", "Human", "Short sword", "1d6", "Gozo (straw matt), rolled up");
+	$a47 = array("Gambler", "Human", "Dagger", "1d4", "Playing cards");
+	$a48 = array("Gardener", "Human", "Shovel (as staff)", "1d4", "Pine cones");
+	$a49 = array("Geisha", "Human", "Knife (as dagger)", "1d4", "A wig and geisha make-up");
+
+	$a50 = array("Geta (sandals) maker", "Human", "Chisel (as dagger)", "1d4", "3 pairs of sandals");
+	$a51 = array("Gobo (burdock root) farmer", "Human", "Sickle (as hand-axe)", "1d6", "Bundle of burdock root");
+	$a52 = array("Green tea farmer", "Human", "Sickle (as hand-axe)", "1d6", "Jar filled with tea leaves");
+	$a53 = array("Haiku poet", "Human", "Short-sword", "1d6", "Calligraphy brush and fine ink");
+	$a54 = array("Hair stylist", "Human", "Scissors (as dagger)", "1d4", "Hand mirror");
+	$a55 = array("Herbalist", "Human", "Knife (as dagger)", "1d4", "Bundle of herbs");
+	$a56 = array("Ikebana florist", "Human", "Knife (as dagger)", "1d4", "Bundle of cut flowers");
+	$a57 = array("Indentured servant", "Human", "Club", "1d4", "Small bag filled with dried barley");
+	$a58 = array("Inn keeper", "Human", "Club", "1d4", "Tinderbox, flint & steel");
+	$a59 = array("Kabuki theatre performer", "Human", "Staff", "1d4", "Theatrical attire");
+
+	$a60 = array("Kimono maker", "Human", "Scissors (as dagger)", "1d4", "Unfinished kimono");
+	$a61 = array("Kite maker", "Human", "Knife (as dagger)", "1d4", "Yard of kite fabric");
+	$a62 = array("Koi (carp) breeder", "Human", "Staff", "1d4", "2 lbs of dried fish food");
+	$a63 = array("Koto (harp) performer", "Human", "Walking stick (as staff)", "1d4", "Koto (harp)");
+	$a64 = array("Lantern maker", "Human", "Chisel (as dagger)", "1d4", "Cast iron lantern");
+	$a65 = array("Masseur", "Human", "Walking stick (as staff)", "1d4", "Conical hat");
+	$a66 = array("Ningyozukai (puppeteer)", "Human", "Staff", "1d4", "Puppet");
+	$a67 = array("Noh theatre performer", "Human", "Staff", "1d4", "Theatrical attire");
+	$a68 = array("Palanquin bearer", "Human", "Knife (as dagger)", "1d4", "Wicker backpack");
+	$a69 = array("Pauper", "Human", "Walking stick (as staff)", "1d4", "Bag filled with dried red beans");
+	$a70 = array("Peasant Levy", "Human", "Spear", "1d8", "Jingasa (conical war helmet)");
+	$a71 = array("Potter", "Human", "Staff", "1d4", "5 lbs of clay");
+	$a72 = array("Puppet maker", "Human", "Chisel (as dagger)", "1d4", "Puppet");
+	$a73 = array("Rice farmer", "Human", "Sickle (as hand-axe)", "1d6", "5 lbs of uncooked rice");
+	$a74 = array("Rice-paper maker", "Human", "Knife (as dagger)", "1d4", "3 lbs of uncooked rice");
+	$a75 = array("Sailor", "Human", "Spear", "1d8", "Lantern, hooded");
+	$a76 = array("Sake brewer", "Human", "Knife (as dagger)", "1d4", "3 bottles of sake");
+	$a77 = array("Sansuke (bathhouse attendant)", "Human", "Walking stick (as staff)", "1d4", "Back scrubbing sponge");
+	$a78 = array("Scavenger", "Human", "Club", "1d4", "Iron pot");
+	$a79 = array("Shakuhachi (flute) performer", "Human", "Staff", "1d4", "Skakuhachi (flute)");
+	$a80 = array("Silk dyer", "Human", "Scissors (as dagger)", "1d4", "1 yard of silk");
+	$a81 = array("Silk weaver", "Human", "Knife (as dagger)", "1d4", "2 yards of fine silk");
+	$a82 = array("Silkworm breeder", "Human", "Knife (as dagger)", "1d4", "Jar filled with silkworm larva");
+	$a83 = array("Soya bean famer", "Human", "Sickle (as hand axe)", "1d6", "5 lbs of soya beans");
+	$a84 = array("Soya sauce brewer", "Human", "Knife (as dagger)", "1d4", "3 bottles of soy sauce");
+	$a85 = array("Storyteller", "Human", "Walking stick (as staff)", "1d4", "Bamboo canteen");
+	$a86 = array("Sumo wrestler", "Human", "Walking stick (as staff)", "1d4", "10 lbs of uncooked rice");
+	$a87 = array("Sword polisher", "Human", "Short sword", "1d6", "Sword stand");
+	$a88 = array("Taiko Drummer", "Human", "Taiko drumsticks x 2 (as clubs)", "1d4", "Taiko drum");
+	$a89 = array("Tatami mat maker", "Human", "Hammer (as club)", "1d4", "Silk rope, 50’");
+	$a90 = array("Tattoo artist", "Human", "Knife (as dagger)", "1d4", "Needles and inks");
+	$a91 = array("Tea ceremony assistant", "Human", "Knife (as dagger)", "1d4", "Jar filled with green tea powder");
+	$a92 = array("Thug", "Human", "Mace", "1d6", "Karuta tatami [armour]");
+	$a93 = array("Unskilled labourer", "Human", "Hammer (as club)", "1d4", "Dozen wooden pitons");
+	$a94 = array("Vagrant", "Human", "Walking stick (as staff)", "1d4", "Pouch containing dried tea leaves");
+	$a95 = array("Village idiot", "Human", "Spear", "1d8", "Conical hat");
+	$a96 = array("Wigmaker", "Human", "Knife (as dagger)", "1d4", "Wig");
+	$a97 = array("Wokou (pirate)", "Human", "Spear", "1d8", "Conical hat");
+	$a98 = array("Woodblock artisan", "Human", "Chisel (as dagger)", "1d4", "Woodblock print");
+	$a99 = array("Yakuza (gangster)", "Human", "Short sword", "1d6", "Tattoo needles and ink");
+
+        $array1 = array($a30, $a31, $a32, $a33, $a34, $a35, $a36, $a37, $a38, $a39, $a40, $a41, $a42, $a43, $a44, $a45, $a46, $a47, $a48, $a49, $a50, $a51, $a52, $a53, $a54, $a55, $a56, $a57, $a58, $a59, $a60, $a61, $a62, $a63, $a64, $a65, $a66, $a67, $a68, $a69, $a70, $a71, $a72, $a73, $a74, $a75, $a76, $a77, $a78, $a79, $a80, $a81, $a82, $a83, $a84, $a85, $a86, $a87, $a88, $a89, $a90, $a91, $a92, $a93, $a94, $a95, $a96, $a97, $a98, $a99);
 
         shuffle($array1);
         

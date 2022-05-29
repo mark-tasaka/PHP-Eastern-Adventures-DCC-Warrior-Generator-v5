@@ -255,7 +255,7 @@
 
        $languages = array();
 
-       $languages = getLanguages($intelligenceMod, $luckMod, $luckySign[0], $species, $alignment, $intelligence);
+       $languages = getLanguages($intelligenceMod, $luckMod, $luckySign[0], $alignment, $intelligence);
 
 
        $trainedWeapon = $occupationArray[2];
