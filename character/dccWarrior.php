@@ -111,11 +111,12 @@
         
         $xpNextLevel = getXPNextLevel ($level);
         
+        /*
         if(isset($_POST["theAbilityScore"]))
         {
             $abilityScoreGen = $_POST["theAbilityScore"];
         
-        }
+        }*/
         
         
         if(isset($_POST["theWealth"]))
@@ -126,6 +127,93 @@
 
         $wealth = getWealth($wealthOption);
 
+        if(isset($_POST['theCustomAbilityScore']) && $_POST['theCustomAbilityScore'] == 1) 
+        {        
+            
+            if(isset($_POST["theStrength"]))
+            {
+                $strengthString = $_POST["theStrength"];
+                $strength = intval($strengthString);
+            }      
+
+            if(isset($_POST["theAgility"]))
+            {
+                $agilityString = $_POST["theAgility"];
+                $agility = intval($agilityString);
+            }     
+
+            if(isset($_POST["theStamina"]))
+            {
+                $staminaString = $_POST["theStamina"];
+                $stamina = intval($staminaString);
+            }       
+
+            if(isset($_POST["thePersonality"]))
+            {
+                $personalityString = $_POST["thePersonality"];
+                $personality = intval($personalityString);
+            }  
+
+            if(isset($_POST["theIntelligence"]))
+            {
+                $intelligenceString = $_POST["theIntelligence"];
+                $intelligence = intval($intelligenceString);
+            }  
+
+            if(isset($_POST["theLuck"]))
+            {
+                $luckString = $_POST["theLuck"];
+                $luck = intval($luckString);
+            }  
+
+            $generationMessage = "Custom Ability Scores";
+
+        }
+        else
+        {        if(isset($_POST["theAbilityScore"]))
+            {
+                $abilityScoreGen = $_POST["theAbilityScore"];
+            
+            }
+            
+            
+            $abilityScoreArray = array();
+            
+            for($i = 0; $i < 6; ++$i)
+            {
+                $abilityScore = rollAbilityScores ($abilityScoreGen);
+    
+                array_push($abilityScoreArray, $abilityScore);
+    
+            }       
+    
+            $strength = $abilityScoreArray[0];
+            $agility = $abilityScoreArray[1];
+            $stamina = $abilityScoreArray[2];
+            $personality = $abilityScoreArray[3];
+            $intelligence = $abilityScoreArray[4];
+            $luck = $abilityScoreArray[5];
+            
+            $generationMessage = generationMesssage ($abilityScoreGen);
+
+        } 
+
+        
+        $strengthMod = getAbilityModifier($strength);
+        $agilityMod = getAbilityModifier($agility);
+        $staminaMod = getAbilityModifier($stamina);
+        $personalityMod = getAbilityModifier($personality);
+        $intelligenceMod = getAbilityModifier($intelligence);
+        $luckMod = getAbilityModifier($luck);
+
+
+/*
+        if(isset($_POST["theAbilityScore"]))
+        {
+            $abilityScoreGen = $_POST["theAbilityScore"];
+        
+        }
+        
         
         $abilityScoreArray = array();
         
@@ -153,7 +241,7 @@
 
 
         $generationMessage = generationMesssage ($abilityScoreGen);
-    
+    */
     
         if(isset($_POST["theArmour"]))
         {
