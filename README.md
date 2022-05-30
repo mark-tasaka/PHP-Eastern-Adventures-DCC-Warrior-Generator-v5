@@ -2,6 +2,11 @@
 The Eastern Adventures Redux Warrior Character Generator is the fifth iteration of the Dungeon Crawl Classics Warrior Character Generator specifically designed for DCC Eastern Adventures campaign supplement.
 
 
+Update 1.07: 2022-05-30
+
+Updates to warrior.css.
+
+
 Update 1.06: 2022-05-29
 
 Updated dccWarrior.
