@@ -10,6 +10,12 @@ https://www.tasaka-games.com/dcc_ea/more/classes/warrior/
 
 --------------
 
+
+Update 1.10: 2022-06-05
+
+Updates to languages.php
+
+
 Update 1.09: 2022-06-05
 
 Updates to languages.php
