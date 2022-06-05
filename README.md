@@ -1,6 +1,20 @@
 # PHP-Eastern-Adventures-DCC-Warrior-Generator-v5
 The Eastern Adventures Redux Warrior [Bushi] Character Generator is the fifth iteration of the Dungeon Crawl Classics Warrior Character Generator specifically designed for DCC Eastern Adventures campaign supplement.
 
+-----------
+
+A live version of the DCC Warrior [Bushi] Character Generator Version 5 is available at:
+
+https://www.tasaka-games.com/dcc_ea/more/classes/warrior/
+
+
+--------------
+
+Update 1.09: 2022-06-05
+
+Updates to languages.php
+
+
 Update 1.08: 2022-05-30
 
 Updates to dccWarrior.
